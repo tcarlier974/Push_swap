@@ -53,5 +53,6 @@ int		get_max(t_stack *stack);
 int		ft_stacksize(t_stack *stack);
 t_stack	*ps_get_next_min(t_stack **stack);
 int		parse_arg(char *arg, t_stack **stack);
+void	free_args(char **args);
 
 #endif

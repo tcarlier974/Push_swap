@@ -28,7 +28,7 @@ static	char	**ft_realloc(char **args, size_t size)
 		i++;
 	}
 	new[i] = NULL;
-	free_args(args);
+	free(args);
 	return (new);
 }
 

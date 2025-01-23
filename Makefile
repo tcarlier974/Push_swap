@@ -8,6 +8,7 @@ SRC = main.c \
 		sort.c \
 		sorted.c \
 		utils.c \
+		free.c \
 		./operation/swap.c \
 		./operation/push.c \
 		./operation/rotate.c \
