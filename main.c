@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/01/23 20:54:57 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/01/23 21:15:43 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	char	**ft_realloc(char **args, size_t size)
 		i++;
 	}
 	new[i] = NULL;
-	free(args);
+	free_args(args);
 	return (new);
 }
 
@@ -102,5 +102,6 @@ int	main(int ac, char **av)
 		handler(&data, data.a);
 	free_stack(&data.a);
 	free_stack(&data.b);
+	free_args(args);
 	return (0);
 }
