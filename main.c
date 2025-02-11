@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/11 14:35:49 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/11 14:42:33 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int	main(int ac, char **av)
 		ac = split_len(args);
 	}
 	else
-		args = av;
+		args = old_args(av);
 	if (!parse_args(ac, args, &data))
 	{
 		ft_putstr_fd("Error\n", 2);
