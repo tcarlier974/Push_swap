@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/01/23 21:15:43 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/11 14:35:49 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,5 @@ int	main(int ac, char **av)
 		handler(&data, data.a);
 	free_stack(&data.a);
 	free_stack(&data.b);
-	free_args(args);
 	return (0);
 }
