@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/11 14:42:33 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/22 23:01:56 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	handler(t_data *data, t_stack *stack)
 	else if (ft_stacksize(stack) == 3)
 		sort_three(data);
 	else if (ft_stacksize(stack) <= 5)
-		sort_five(data);
+        sort_five(data);
 	else
 		sort(data);
 }
