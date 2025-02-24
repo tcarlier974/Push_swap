@@ -6,26 +6,11 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:40:40 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:57:51 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 23:01:59 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
-
-static int	get_distance(t_stack *stack, int value)
-{
-	int	dist;
-
-	dist = 0;
-	while (stack)
-	{
-		if (stack->index == value)
-			break ;
-		stack = stack->next;
-		dist++;
-	}
-	return (dist);
-}
 
 static void	sort_3_sub(t_stack **phead, int *pmin, int *pnext_min,
 	t_data *data)
@@ -116,4 +101,23 @@ void	sort_5(t_data *data)
 	push_b(data);
 	sort_4(data);
 	push_a(data);
+}
+
+void	simple_sort(t_data *data)
+{
+	int	size;
+
+	if (is_sorted(data->a) || ft_stacksize(data->a) <= 1)
+		return ;
+	size = ft_stacksize(data->a);
+	if (size == 2)
+		swap_a(data);
+	else if (size == 3)
+		sort_3(data);
+	else if (size == 4)
+		sort_4(data);
+	else if (size == 5)
+		sort_5(data);
+	else
+		sort(data);
 }
