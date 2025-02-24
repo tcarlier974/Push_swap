@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 22:25:46 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:49:10 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:56:02 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,19 +59,19 @@ int	is_sorted(t_stack *stack)
 
 void	simple_sort(t_data *data)
 {
-    int	size;
+	int	size;
 
-    if (is_sorted(data->a) || ft_stacksize(data->a) <= 1)
-        return ;
-    size = ft_stacksize(data->a);
-    if (size == 2)
-        swap_a(data);
-    else if (size == 3)
-        sort_3(data);
-    else if (size == 4)
-        sort_4(data);
-    else if (size == 5)
-        sort_5(data);
+	if (is_sorted(data->a) || ft_stacksize(data->a) <= 1)
+		return ;
+	size = ft_stacksize(data->a);
+	if (size == 2)
+		swap_a(data);
+	else if (size == 3)
+		sort_3(data);
+	else if (size == 4)
+		sort_4(data);
+	else if (size == 5)
+		sort_5(data);
 	else
 		sort(data);
 }
