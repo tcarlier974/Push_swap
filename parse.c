@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:27:34 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:37:06 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:40:09 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int	is_valid_arg(char *arg)
 	i = 0;
 	if (arg[i] == '-')
 		i++;
+	if (i == 1 && !arg[i])
+		return (0);
 	while (arg[i])
 	{
 		if (!ft_isdigit(arg[i]))
