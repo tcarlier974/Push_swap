@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:40:40 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:18:17 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:20:16 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -151,6 +151,8 @@ void	simple_sort(t_data *data)
         sort_4(data);
     else if (size == 5)
         sort_5(data);
+	else
+		sort(data);
 }
 
 int	is_sorted(t_stack *stack)
