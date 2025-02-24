@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:27:34 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/01/23 20:42:50 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:13:41 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,17 +60,17 @@ int	parse_arg(char *arg, t_stack **stack)
 	return (1);
 }
 
-static void	ps_index_stack(t_stack **stack)
+static void	index_stack(t_stack **stack)
 {
 	t_stack	*head;
 	int		index;
 
 	index = 0;
-	head = ps_get_next_min(stack);
+	head = get_next_min(stack);
 	while (head)
 	{
 		head->index = index++;
-		head = ps_get_next_min(stack);
+		head = get_next_min(stack);
 	}
 }
 
@@ -85,6 +85,6 @@ int	parse_args(int ac, char **av, t_data *data)
 			return (0);
 		i--;
 	}
-	ps_index_stack(&data->a);
+	index_stack(&data->a);
 	return (1);
 }

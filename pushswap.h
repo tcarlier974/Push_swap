@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:17:27 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/22 23:02:09 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:13:11 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct s_data
 }	t_data;
 
 int		parse_args(int ac, char **av, t_data *data);
+void	simple_sort(t_data *data);
 void	free_stack(t_stack **stack);
 void	swap_a(t_data *data);
 void	swap_b(t_data *data);
@@ -44,14 +45,12 @@ void	rotate_r(t_data *data);
 void	reverse_rotate_a(t_data *data);
 void	reverse_rotate_b(t_data *data);
 void	reverse_rotate_r(t_data *data);
-void	sort_three(t_data *data);
-void	sort_five(t_data *data);
 void	sort(t_data *data);
 int		is_sorted(t_stack *stack);
 int		get_min(t_stack *stack);
 int		get_max(t_stack *stack);
 int		ft_stacksize(t_stack *stack);
-t_stack	*ps_get_next_min(t_stack **stack);
+t_stack	*get_next_min(t_stack **stack);
 int		parse_arg(char *arg, t_stack **stack);
 void	free_args(char **args);
 char	**old_args(char **av);

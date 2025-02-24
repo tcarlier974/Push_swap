@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:41:56 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/01/23 20:54:41 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:13:29 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	ft_stacksize(t_stack *stack)
 	return (i);
 }
 
-t_stack	*ps_get_next_min(t_stack **stack)
+t_stack	*get_next_min(t_stack **stack)
 {
 	t_stack	*head;
 	t_stack	*min;

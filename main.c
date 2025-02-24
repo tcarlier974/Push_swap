@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/22 23:01:56 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 21:59:36 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,18 +65,6 @@ static	int	split_len(char **av)
 	return (i);
 }
 
-void	handler(t_data *data, t_stack *stack)
-{
-	if (ft_stacksize(stack) == 2)
-		swap_a(data);
-	else if (ft_stacksize(stack) == 3)
-		sort_three(data);
-	else if (ft_stacksize(stack) <= 5)
-        sort_five(data);
-	else
-		sort(data);
-}
-
 int	main(int ac, char **av)
 {
 	t_data	data;
@@ -99,7 +87,7 @@ int	main(int ac, char **av)
 		return (1);
 	}
 	if (!is_sorted(data.a))
-		handler(&data, data.a);
+		simple_sort(&data);
 	free_stack(&data.a);
 	free_stack(&data.b);
 	return (0);
