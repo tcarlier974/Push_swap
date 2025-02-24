@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:17:27 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:48:55 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:51:54 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ void	free_args(char **args);
 char	**old_args(char **av);
 void	four_check(char *str);
 long	ft_atol(char *ptr);
-int	is_sorted(t_stack *stack);
+int		is_sorted(t_stack *stack);
 
 #endif

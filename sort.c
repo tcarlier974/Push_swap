@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:34:04 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/11 15:12:05 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:52:33 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ int	get_nb_nb(t_stack **a)
 
 void	sort(t_data *data)
 {
-    int		max_bits;
-    int		size;
-    int		i;
-    int		j;
-    t_stack	*current;
+    int     max_bits;
+    int     size;
+    int     i;
+    int     j;
+    t_stack *current;
 
     size = ft_stacksize(data->a);
     max_bits = 0;
