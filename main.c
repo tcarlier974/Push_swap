@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 21:59:36 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:24:29 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int	main(int ac, char **av)
 		return (0);
 	else if (ac == 2)
 	{
+		four_check(av[1]);
 		args = new_args(av[0], ft_split(av[1], ' '));
 		ac = split_len(args);
 	}

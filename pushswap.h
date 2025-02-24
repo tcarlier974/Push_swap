@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:17:27 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:13:11 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:24:57 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ t_stack	*get_next_min(t_stack **stack);
 int		parse_arg(char *arg, t_stack **stack);
 void	free_args(char **args);
 char	**old_args(char **av);
+void	four_check(char *str);
 
 #endif
