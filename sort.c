@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:34:04 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:55:25 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 23:00:01 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,31 +34,28 @@ int	get_nb_nb(t_stack **a)
 
 void	sort(t_data *data)
 {
-	int		max_bits;
-	int		size;
-	int		i;
-	int		j;
+	t_sort	sort;
 	t_stack	*current;
 
-	size = ft_stacksize(data->a);
-	max_bits = 0;
-	while (((size - 1) >> max_bits) != 0)
-		max_bits++;
-	i = 0;
-	while (i < max_bits)
+	sort.size = ft_stacksize(data->a);
+	sort.max_bits = 0;
+	while (((sort.size - 1) >> sort.max_bits) != 0)
+		sort.max_bits++;
+	sort.i = 0;
+	while (sort.i < sort.max_bits)
 	{
-		j = 0;
-		while (j < size)
+		sort.j = 0;
+		while (sort.j < sort.size)
 		{
 			current = data->a;
-			if (((current->index >> i) & 1) == 1)
+			if (((current->index >> sort.i) & 1) == 1)
 				rotate_a(data);
 			else
 				push_b(data);
-			j++;
+			sort.j++;
 		}
 		while (ft_stacksize(data->b) != 0)
 			push_a(data);
-		i++;
+		sort.i++;
 	}
 }
