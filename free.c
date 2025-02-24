@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 21:15:19 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/11 14:44:55 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:47:14 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	free_args(char **args)
 
 char	**old_args(char **av)
 {
-	int	i;
+	int		i;
 	char	**args;
 
 	i = 0;
