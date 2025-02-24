@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:40:40 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:50:47 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:56:34 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,35 @@
 
 static int	get_min_simple(t_stack *stack, int exclude)
 {
-    int	min;
-    int	found;
+	int	min;
+	int	found;
 
-    found = 0;
-    while (stack)
-    {
-        if (stack->index > exclude && (!found || stack->index < min))
-        {
-            min = stack->index;
-            found = 1;
-        }
-        stack = stack->next;
-    }
-    return (min);
+	found = 0;
+	while (stack)
+	{
+		if (stack->index > exclude && (!found || stack->index < min))
+		{
+			min = stack->index;
+			found = 1;
+		}
+		stack = stack->next;
+	}
+	return (min);
 }
 
 static int	get_distance(t_stack *stack, int value)
 {
-    int	dist;
+	int	dist;
 
-    dist = 0;
-    while (stack)
-    {
-        if (stack->index == value)
-            break ;
-        stack = stack->next;
-        dist++;
-    }
-    return (dist);
+	dist = 0;
+	while (stack)
+	{
+		if (stack->index == value)
+			break ;
+		stack = stack->next;
+		dist++;
+	}
+	return (dist);
 }
 
 static void	sort_3_sub(t_stack **phead, int *pmin, int *pnext_min,
