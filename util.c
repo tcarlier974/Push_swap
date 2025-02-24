@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 22:25:46 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:56:02 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/24 22:57:58 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,22 @@ void	simple_sort(t_data *data)
 		sort_5(data);
 	else
 		sort(data);
+}
+
+int	get_min_simple(t_stack *stack, int exclude)
+{
+	int	min;
+	int	found;
+
+	found = 0;
+	while (stack)
+	{
+		if (stack->index > exclude && (!found || stack->index < min))
+		{
+			min = stack->index;
+			found = 1;
+		}
+		stack = stack->next;
+	}
+	return (min);
 }
