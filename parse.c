@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:27:34 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 22:40:09 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 22:57:28 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	parse_args(int ac, char **av, t_data *data)
 {
 	int	i;
 
-	i = ac - 1;
+	i = ac;
 	while (i > 0)
 	{
 		if (!parse_arg(av[i], &data->a))
