@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 00:19:15 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 00:25:43 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,7 @@ int	main(int ac, char **av)
 		k = 1;
 	}
 	else
-	{
-		args = av;
-		ac--;
-		k = 0;
-	}
+		init_for_args(&args, &ac, &av, &k);
 	if (!parse_args(ac, args, &data, k))
 		exit_error(&data.a, &data.b, args, av);
 	if (!is_sorted(data.a))

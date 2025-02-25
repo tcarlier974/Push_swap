@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 21:15:19 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 00:20:57 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 00:25:25 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,11 @@ void	exit_error(t_stack **a, t_stack **b, char **args, char **av)
 	freezer(a, b, args, av);
 	ft_putstr_fd("Error\n", 2);
 	exit(1);
+}
+
+void init_for_args(char ***args, int *ac, char ***av, int *k)
+{
+	*args = *av;
+	*(ac)--;
+	*k = 0;
 }
