@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:17:27 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/26 00:20:51 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 00:26:23 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,6 @@ int		get_distance(t_stack *stack, int value);
 void	freezer(t_stack **a, t_stack **b, char **args, char **av);
 void	free_split(char **split);
 void	exit_error(t_stack **a, t_stack **b, char **args, char **av);
+void	init_for_args(char ***args, int *ac, char ***av, int *k);
 
 #endif
