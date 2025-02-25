@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 23:13:07 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 23:25:10 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int ac, char **av)
 	else
 	{
 		args = av;
-		ac--;
+		ac;
 	}
 	if (!parse_args(ac, args, &data))
 	{
