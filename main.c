@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 23:51:08 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 23:53:49 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 	char	**args;
+	int		k;
 
 	data.a = NULL;
 	data.b = NULL;
@@ -37,13 +38,15 @@ int	main(int ac, char **av)
 		four_check(av[1]);
 		args = ft_split(av[1], ' ');
 		ac = split_len(args) - 1;
+		k = 0;
 	}
 	else
 	{
 		args = av;
-		ac = ac - 2;
+		ac--;
+		k = 1;
 	}
-	if (!parse_args(ac, args, &data))
+	if (!parse_args(ac - k, args, &data))
 	{
 		ft_putstr_fd("Error\n", 2);
 		return (1);
