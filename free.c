@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 21:15:19 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 22:44:03 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 23:06:42 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,12 @@ char	**old_args(char **av)
 	return (args);
 }
 
-void	freezer(t_stack **a, t_stack **b, char **args)
+void	freezer(t_stack **a, t_stack **b, char **args, char **av)
 {
-	free_args(args);
 	free_stack(a);
 	free_stack(b);
+	if (!av[2])
+		free_args(args);
 }
 
 void	free_split(char **split)

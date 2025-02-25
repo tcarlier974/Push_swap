@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 23:03:25 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 23:05:50 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ int	main(int ac, char **av)
 	}
 	if (!is_sorted(data.a))
 		simple_sort(&data);
-	freezer(&data.a, &data.b, args);
+	freezer(&data.a, &data.b, args, av);
 	return (0);
 }
