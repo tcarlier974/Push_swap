@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:17:27 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/24 23:01:41 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 22:25:45 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ long	ft_atol(char *ptr);
 int		is_sorted(t_stack *stack);
 int		get_min_simple(t_stack *stack, int exclude);
 int		get_distance(t_stack *stack, int value);
+void	freezer(t_stack **a, t_stack **b, char **args);
 
 #endif
