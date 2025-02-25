@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:17:27 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 23:07:01 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/26 00:14:10 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct s_sort
 	int		j;
 }	t_sort;
 
-int		parse_args(int ac, char **av, t_data *data);
+int		parse_args(int ac, char **av, t_data *data, int k);
 void	simple_sort(t_data *data);
 void	free_stack(t_stack **stack);
 void	swap_a(t_data *data);
