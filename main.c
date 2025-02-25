@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 23:53:49 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 23:59:12 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(int ac, char **av)
 		ac--;
 		k = 1;
 	}
-	if (!parse_args(ac - k, args, &data))
+	if (!parse_args(ac + k, args, &data))
 	{
 		ft_putstr_fd("Error\n", 2);
 		return (1);
