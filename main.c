@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 17:26:13 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 22:26:17 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 22:43:18 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static char	**new_args(char *name, char **av)
 		i++;
 	}
 	args[i + 1] = NULL;
+	free_split(av);
 	return (args);
 }
 

@@ -6,7 +6,7 @@
 /*   By: tcarlier <tcarlier@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 21:15:19 by tcarlier          #+#    #+#             */
-/*   Updated: 2025/02/25 22:35:09 by tcarlier         ###   ########.fr       */
+/*   Updated: 2025/02/25 22:44:03 by tcarlier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,19 @@ char	**old_args(char **av)
 void	freezer(t_stack **a, t_stack **b, char **args)
 {
 	free_args(args);
-	// (void)a;
-	// (void)b;
-	// (void)args;
 	free_stack(a);
 	free_stack(b);
+}
+
+void	free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
 }
